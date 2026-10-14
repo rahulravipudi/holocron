@@ -724,7 +724,7 @@
     <div class="thesis">
       <p class="eyebrow">Case study &middot; Salesforce &middot; Apex &middot; LLM agents</p>
       <h1>A Salesforce AI assistant that costs about <em>$2 per 1,000 questions</em>, on the model you choose.</h1>
-      <p class="lede">Holocron answers questions about cases, opportunities and leads in plain language, straight from live Salesforce data. <strong>I designed and built all of it</strong>: the reasoning loop, the data tools, the model connection and the admin setup. The same two-step question costs $200 per 1,000 at Agentforce list price.</p>
+      <p class="lede">Holocron answers questions about cases, opportunities and leads in plain language, straight from live Salesforce data. <strong>I designed and built it end to end</strong>: the reasoning loop, the data tools, the model connection and the admin setup. The same two-step question costs $200 per 1,000 at Agentforce list price.</p>
       <p class="byline">Designed and built by <b>Rahul Ravipudi</b></p>
       <a class="see" href="#product">See it running in Salesforce <span aria-hidden="true">&darr;</span></a>
     </div>
@@ -755,7 +755,7 @@
     </div>
     <ul class="figures">
       <li><b>$2.16</b><span>per 1,000 questions, two tool calls each, before caching</span></li>
-      <li><b>93&ndash;165&times;</b><span>cheaper than Agentforce Flex Credits for the same question</span></li>
+      <li><b>93&ndash;165&times;</b><span>lower usage cost than Agentforce Flex Credits for the same question</span></li>
       <li><b>18 models</b><span>from OpenAI and Anthropic, switched from a dropdown</span></li>
     </ul>
   </div>
@@ -843,7 +843,7 @@
       <div class="claim"><b>The model is a setting</b>18 models from OpenAI and Anthropic today. An administrator switches between them from a dropdown.</div>
       <div class="claim"><b>The user's own permissions</b>Every query and update runs as the person asking. Updates stay off until an administrator turns them on.</div>
       <div class="claim"><b>Answers with their evidence</b>Each answer lists the records behind it, with links and a CSV export of the full result.</div>
-      <div class="claim"><b>Installs without configuration</b>Works on standard objects out of the box. An administrator adds custom objects, fields and business terms without code.</div>
+      <div class="claim"><b>Deploys without configuration</b>Works on standard objects out of the box. An administrator adds custom objects, fields and business terms without code.</div>
     </div>
   </section>
 
@@ -894,7 +894,7 @@
           </tbody>
         </table>
       </div>
-      <p class="fine">How the numbers were made: Agentforce is 20 Flex Credits per action at $500 per 100,000 credits. Holocron uses token counts logged from 107 tested questions (two-tool-call questions averaged 19,088 input and 493 output tokens) priced on GPT-6 Luna at $0.10 per million input tokens, $0.01 cached and $0.50 output. This is usage cost only. Licences are left out on both sides, and so is the effort to build and maintain a custom assistant. <a href="https://claude.ai/code/artifact/61443861-dc23-4c01-824b-0eb30a4b5406">Full calculation</a>.</p>
+      <p class="fine">How the numbers were made: Agentforce is 20 Flex Credits per action at $500 per 100,000 credits (list prices as of 2026). Holocron uses token counts logged from 107 tested questions (two-tool-call questions averaged 19,088 input and 493 output tokens) priced on GPT-6 Luna at $0.10 per million input tokens, $0.01 cached and $0.50 output. This is usage cost only. Licences are left out on both sides, and so is the effort to build and maintain a custom assistant. <a href="https://claude.ai/code/artifact/61443861-dc23-4c01-824b-0eb30a4b5406">Full calculation</a>.</p>
     </div>
   </section>
 
@@ -927,7 +927,7 @@
     <div class="sec-head">
       <p class="eyebrow">In progress</p>
       <h2 id="usage-h">Who is spending what, to the minute</h2>
-      <p>Every answer already writes its token counts to a usage log inside Salesforce. The next release turns that log into a dashboard: tokens, cost and questions for any period, broken down by user, current as of the last refresh.</p>
+      <p>Every answer already writes its token counts to a usage log inside Salesforce. Next, that log becomes a dashboard: tokens, cost and questions for any period, broken down by user, current as of the last refresh.</p>
     </div>
     <div class="panel dash" id="dash">
       <div class="dash-head">
@@ -987,12 +987,11 @@
           <h3>Working today</h3>
           <ul>
             <li>Answers over cases, opportunities, leads, accounts and more <span>&middot; search, count, summarise, export, update</span></li>
-            <li>18 models from two providers <span>&middot; each verified end to end</span></li>
+            <li>18 models from two providers <span>&middot; each tested for tool calling</span></li>
             <li>Admin setup page <span>&middot; pick the model without code</span></li>
-            <li>Installs in a clean org with no configuration</li>
+            <li>Deploys to a clean org with no configuration</li>
             <li>Usage, cost and response time logged for every answer</li>
             <li>A customer-specific build <span>&middot; in user acceptance testing at an enterprise client</span></li>
-            <li>About 6,300 lines of Apex and three Lightning components</li>
           </ul>
         </div>
         <div class="next">
@@ -1000,7 +999,7 @@
           <ul>
             <li>Live usage and cost dashboard <span>&middot; by user and period</span></li>
             <li>Direct Azure AI Foundry and Google connections</li>
-            <li>Longer-running answers</li>
+            <li>Multi-step questions answered in the background</li>
             <li>Actions an administrator defines without code</li>
             <li>Automated test suite and packaging for one-click install</li>
           </ul>
