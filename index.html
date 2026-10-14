@@ -350,6 +350,26 @@
     border-radius: 6px;
   }
 
+  /* Top bar ------------------------------------------------------------------ */
+  .band .wrap.topbar {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    gap: 10px 20px;
+    padding-block: 14px;
+    border-bottom: 1px solid var(--band-line);
+    font-size: 0.875rem;
+  }
+  .topbar .who { font-family: var(--display); font-weight: 600; color: var(--band-ink); }
+  .topbar .projects { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .topbar .here { color: var(--band-soft); padding: 6px 4px; }
+  .topbar .other {
+    color: var(--band); background: var(--band-gold);
+    font-weight: 600; text-decoration: none;
+    border-radius: 999px; padding: 6px 14px;
+  }
+  .topbar .other:hover { background: var(--band-ink); }
+  .topbar .other:focus-visible { outline-color: var(--band-gold); }
+  .sign a { color: var(--band-gold); }
+
   /* Product stage ---------------------------------------------------------- */
   .stage {
     background: var(--stage);
@@ -693,6 +713,13 @@
 </style>
 
 <div class="band">
+  <nav class="topbar wrap" aria-label="Projects">
+    <span class="who">Rahul Ravipudi</span>
+    <span class="projects">
+      <span class="here" aria-current="page">Holocron</span>
+      <a class="other" href="https://claude.ai/artifact/PbrPPQUFxWNPp37WzJw29p">Zeus AI Accelerator <span aria-hidden="true">&rarr;</span></a>
+    </span>
+  </nav>
   <div class="wrap">
     <div class="thesis">
       <p class="eyebrow">Case study &middot; Salesforce &middot; Apex &middot; LLM agents</p>
@@ -996,7 +1023,7 @@
           <span class="sel big">+91 7416188392</span>
         </div>
       </div>
-      <p class="sign">Holocron was designed and built by <b>Rahul Ravipudi</b>.</p>
+      <p class="sign">Holocron was designed and built by <b>Rahul Ravipudi</b>. I also built <a href="https://claude.ai/artifact/PbrPPQUFxWNPp37WzJw29p">Zeus AI Accelerator</a>, which answers questions about each new Salesforce record and fills in its fields as it arrives.</p>
     </section>
   </div>
 </div>
